@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSpace | AI Listener</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="logo">SafeSpace AI <span class="badge">SECURE</span></div>
+        <button id="mobileMenuBtn" class="mobile-menu-btn">☰</button>
+        <div class="nav-links desktop-menu">
+            <button class="nav-btn" id="navHome">Home</button>
+            <div class="auth-group">
+                <button class="auth-btn login-btn">Log In</button>
+                <button class="auth-btn signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="mobile-menu glass">
+        <button class="nav-btn" id="navHomeMobile">Home</button>
+        <button class="auth-btn login-btn">Log In</button>
+        <button class="auth-btn signup-btn">Sign Up</button>
+    </div>
+
+    <main class="container">
+        <!-- ================= HERO SECTION ================= -->
+        <section id="heroSection" class="active-section fade-in">
+            <div class="hero-content">
+                <h1 class="gradient-text">A Safe Space for Your Mind.</h1>
+                <p class="subtitle">A compassionate, private AI listener designed to help students manage academic stress, burnout, and anxiety.</p>
+                <button id="startBtn" class="cta-button glow-hover">Start Chatting <span class="arrow">→</span></button>
+            </div>
+
+            <div class="trending-section">
+                <p class="trending-title">Not sure how to start? Try a prompt:</p>
+                <div class="tag-cloud">
+                    <button class="search-tag">I'm feeling overwhelmed by exams.</button>
+                    <button class="search-tag">I can't seem to focus today.</button>
+                    <button class="search-tag">I just need someone to listen.</button>
+                    <button class="search-tag">Help me with a breathing exercise.</button>
+                </div>
+            </div>
+
+            <div class="product-map-container">
+                <div class="product-map grid-3">
+                    <div class="map-card glass" data-tilt data-tilt-max="5">
+                        <div class="icon-wrapper">🔒</div>
+                        <h3>100% Private</h3>
+                        <p>Your conversations are secure and ephemeral. We do not store your personal chats.</p>
+                    </div>
+                    <div class="map-card glass" data-tilt data-tilt-max="5">
+                        <div class="icon-wrapper">💙</div>
+                        <h3>Empathetic AI</h3>
+                        <p>Powered by Gemini, our listener is trained to validate your feelings and provide a warm environment.</p>
+                    </div>
+                    <div class="map-card glass" data-tilt data-tilt-max="5">
+                        <div class="icon-wrapper">🛠️</div>
+                        <h3>Coping Tools</h3>
+                        <p>Get personalized suggestions for grounding techniques and stress-relief exercises instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CHAT WORKSPACE ================= -->
+        <section id="appSection" class="hidden">
+            <div class="workspace-header">
+                <h2 class="gradient-text">Your Safe Session</h2>
+            </div>
+
+            <div class="chat-container glass">
+                <div id="chatBox" class="chat-history">
+                    <div class="chat-message bot">
+                        <div class="bubble">Hi there. I'm here to listen. How are your classes going, or is there anything weighing on your mind today?</div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-area">
+                    <textarea id="userInput" placeholder="Share what's on your mind..."></textarea>
+                    <button id="sendBtn" class="send-btn glow-hover">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="mainFooter">
+        <div class="footer-content">
+            <p>Built with <span class="heart">❤️</span> by Durganand Sah.</p>
+            <p class="mlh-tag">&lt;/&gt; GDG SOIT Mini Hackathon 2026</p>
+            <p class="copyright">Emergency? In India, call AASRA at 9820466726.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
