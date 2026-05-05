@@ -26,11 +26,11 @@ app.post('/api/chat', async (req, res) => {
         console.log(`[SafeSpace] Incoming message received.`);
 
         const response = await ai.models.generateContent({
-            model: 'gemini-2.0-flash', 
+            model: 'gemini-2.0-flash-Lite', 
             contents: message,
             config: { 
                 systemInstruction: SYSTEM_INSTRUCTION,
-                temperature: 0.6 // Slightly lower temperature for consistent, calm responses
+                temperature: 1.6 // Slightly lower temperature for consistent, calm responses
             }
         });
 
